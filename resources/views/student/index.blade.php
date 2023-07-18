@@ -176,7 +176,7 @@
                 <div class="card-body">
 
 
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="myTable">
                   <thead>
                   <tr>
                     <th>id</th>
@@ -184,7 +184,8 @@
                     <th>caurse</th>
                     <th>email</th>
                     <th>phone</th>
-                    <th>action</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -222,6 +223,8 @@
 <script>
   $(document).ready(function(){
 
+   //data table  //data table eka hriyt enna nm theadings ganatama td hdnna oni
+   $('#myTable').DataTable();
     //delete
     $(document).on('click', '.delete-btn', function(){
      var stud_id = $(this).val();

@@ -13,7 +13,7 @@
       </div>
 
       <!-- <form action="{{ url('add-caurse')}}"  method="POST"> -->
-      <form action="{{ url('add-caurse')}}"  method="POST">   
+      <form action="{{ url('add-caurse')}}"  method="POST">
       @csrf
       <div class="modal-body"> <!-- model body eka form eka athule tynna oni-->
 
@@ -170,7 +170,7 @@
                 <div class="card-body">
 
 
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="myTable">
                   <thead>
                   <tr>
                     <th>id</th>
@@ -178,7 +178,8 @@
                     <th>No Of Modules</th>
                     <th>Time Period</th>
                     <th>Price</th>
-                    <th>Action</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -214,7 +215,20 @@
 
 @section('scripts')
 <script>
+
+
+
+
+
+
+
+
   $(document).ready(function(){
+
+    // data table eka load krnna
+   // let table = new DataTable('#myTable');
+   $('#myTable').DataTable();
+
 
     //delete
     $(document).on('click', '.delete-btn', function(){
